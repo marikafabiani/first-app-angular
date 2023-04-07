@@ -1,0 +1,12 @@
+<button class="btn btn-primary" (click)="onDisplayDetails()">
+  Display Details
+</button>
+<p *ngIf="showDetail">Secret Password = tuna</p>
+<div *ngFor="let click of arrayClick">
+  <p
+    [ngStyle]="{ backgroundColor: getColor(click) }"
+    [ngClass]="{ colorText: click >= 5 }"
+  >
+    {{ click }}
+  </p>
+</div>
