@@ -14,7 +14,7 @@ import { Component, OnInit } from "@angular/core";
 export class Exercise3Component implements OnInit {
   showDetail: boolean = false;
   numberClick: number = 0;
-  arrayClick: number[] = [];
+  arrayClick = [];
 
   constructor() {}
 
@@ -22,8 +22,8 @@ export class Exercise3Component implements OnInit {
 
   onDisplayDetails() {
     this.showDetail = !this.showDetail;
-    this.numberClick += 1;
-    this.arrayClick.push(this.numberClick);
+    // this.numberClick += 1;
+    this.arrayClick.push(new Date());
   }
 
   getColor(click: number) {

@@ -2,11 +2,10 @@
   Display Details
 </button>
 <p *ngIf="showDetail">Secret Password = tuna</p>
-<div *ngFor="let click of arrayClick">
-  <p
-    [ngStyle]="{ backgroundColor: getColor(click) }"
-    [ngClass]="{ colorText: click >= 5 }"
-  >
-    {{ click }}
-  </p>
+<div
+  *ngFor="let click of arrayClick; let i = index"
+  [ngStyle]="{ backgroundColor: getColor(i) }"
+  [ngClass]="{ colorText: i >= 5 }"
+>
+  {{ click }}
 </div>
